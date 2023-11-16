@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hivley</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../styles/style-page.css">
+    <link rel="shortcut icon" href="../img/Hivley_bee.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/1572e4d37e.js" crossorigin="anonymous"></script>
+</head>
+
+<body class=" bg-black w-screen h-screen mt-5 pt-5 mx-auto">
+    <div class="main started container mx-auto flex justify-center items-center flex-col">
+        <input id="input"
+            class="btn1 bg-[#FFA410] px-[2.5rem] py-[0.8rem] rounded-lg font-bold w-auto placeholder:text-sm placeholder:text-[black] placeholder:opacity-100"
+            placeholder="What are you looking for today?"></input>
+
+
+        <div class="content justify-center items-center  text-center mt-5">
+            <h3 class="text-[#FFA410] font-bold flex justify-start">Featured</h3>
+            <div class="flex gap-3 text-white text-[60%] mt-3">
+                <figure class="card">
+                    <img src="../img/img1.png" alt="">
+                    <figcaption>
+                        <p>Amy’s mock Interviews</p>
+                    </figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="../img/img2.png" alt="">
+                    <figcaption>
+                        <p>Lion Tutors</p>
+                    </figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="../img/img3.png" alt="">
+                    <figcaption>
+                        <p>Jacob’s resume tips</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <div class="content justify-center items-center  text-center mt-5">
+            <h3 class="text-[#FFA410] font-bold flex justify-start">Graphics and Design</h3>
+            <div class="flex gap-3 text-white text-[60%] mt-3">
+                <figure class="card">
+                    <img src="../img/img4.png" alt="">
+                    <figcaption>
+                        <p>Poster Design</p>
+                    </figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="../img/img5.png" alt="">
+                    <figcaption>
+                        <p>Vector Illustrations</p>
+                    </figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="../img/img6.png" alt="">
+                    <figcaption>
+                        <p>Photography</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <div class="content justify-center items-center  text-center mt-5">
+            <h3 class="text-[#FFA410] font-bold flex justify-start">Hobbies</h3>
+            <div class="flex gap-3 text-white text-[60%] mt-3">
+                <figure class="card">
+                    <img src="../img/img7.png" alt="">
+                    <figcaption>
+                        <p>Music</p>
+                    </figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="../img/img8.png" alt="">
+                    <figcaption>
+                        <p>Sports</p>
+                    </figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="../img/img9.png" alt="">
+                    <figcaption>
+                        <p>Debate</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <div class="mt-5">
+            <button class="btn1 bg-[#FFA410] px-[2.5rem] py-[0.8rem] rounded-full font-bold w-auto">Show more
+                categories</button>
+        </div>
+
+        <div
+            class="panel mt-5 bg-[#FFA410] flex justify-center gap-8 text-[60%] font-bold py-[0.4rem] px-[1.5rem] rounded-full text-center items-center fixed bottom-[2%]">
+            <figure class="home">
+                <img src="../img/home.png" class="mx-auto" alt="">
+                <figcaption>
+                    <p>Home</p>
+                </figcaption>
+            </figure>
+            <figure class="search">
+                <img src="../img/search.png" class="mx-auto" alt="">
+                <figcaption>
+                    <p>Search</p>
+                </figcaption>
+            </figure>
+            <figure class="add_new">
+                <img src="../img/plus.png" class="mx-auto" alt="">
+                <figcaption>
+                    <p>Create</p>
+                </figcaption>
+            </figure>
+            <figure class="dashboard">
+                <img src="../img/dashboard.png" class="mx-auto" alt="">
+                <figcaption>
+                    <p>Dashboard</p>
+                </figcaption>
+            </figure>
+            <figure class="profile">
+                <img src="../img/profile.png" alt="">
+                <figcaption>
+                    <p>Profile</p>
+                </figcaption>
+            </figure>
+        </div>
+
+    </div>
+
+
+
+    <div
+        class="info-profile h-screen bg-[rgba(0,0,0,0.5)] fixed top-0 w-screen flex items-center justify-center bg-gray-500 bg-opacity-75 transition-opacity hidden">
+        <div class="popup-in w-max h-max bg-black p-8 rounded-2xl">
+
+            <div class="flex justify-end mb-3 px-5">
+                <button id="close-popup"> <i class="fa-solid fa-xmark" style="color: #ffffff;"></i> </button>
+            </div>
+
+            <div class="flex items-center border-[red] justify-center">
+
+                <div class="border-white flex flex-col align-center">
+                    <img class="w-[200px] h-[200px]" src="../img/default.png" alt="avatar"
+                        id="img-info" />
+                    <input type="file" name="foto" id="foto" accept="image/*" />
+                    <label for="foto">Cambiar foto</label>
+                </div>
+
+                <div class="text-[white]">
+                    <h2>Personal Information</h2>
+                    <br>
+                    <h5>User:</h5>
+                    <p id="info-user"></p>
+                    <h5>Email:</h5>
+                    <p id="info-email"></p>
+                    <h5>Password:</h5>
+                    <p id="info-password"></p>
+
+                </div>
+                
+            </div>
+            <br>
+            <div class="flex justify-center">
+                <button class="summit text-[white] bg-[#FFA410] px-[2rem] py-[0.5rem] rounded-lg font-bold w-auto">Save info</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="..//js/script-page.js"></script>
+</body>
+
+</html>

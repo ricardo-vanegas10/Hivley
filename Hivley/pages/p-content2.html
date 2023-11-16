@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="flex historias gap-2">
+
+    </header>
+
+    <div
+      class="popup-out w-screen h-screen bg-black absolute top-0 flex justify-center items-center hidden"
+    >
+      <div class="popup-in w-[70%] h-[80%] rounded-lg">
+        <button class="bg-white absolute right-[20%] top-[12%] equis">X</button>
+        <img
+          src=""
+          alt=""
+          class="h-[100%] object-cover w-[100%] rounded-lg img-historia"
+        />
+      </div>
+    </div>
+
+    <script>
+      const historias = document.querySelector(".historias");
+      const popup = document.querySelector(".popup-out");
+      const equis = document.querySelector(".equis");
+      const imgHistoria = document.querySelector(".img-historia");
+
+      let imgs = [
+        "https://astelus.com/wp-content/viajes/Lago-Moraine-Parque-Nacional-Banff-Alberta-Canada.jpg",
+        "https://tse3.mm.bing.net/th?id=OIP.Bi0PkoTiRjGeZOLBp2HJCAHaEK&pid=Api&P=0&h=180",
+        "https://previews.123rf.com/images/aprillrain/aprillrain2212/aprillrain221200638/196354278-imagen-de-caricatura-de-un-astronauta-sentado-en-una-luna-ilustraci%C3%B3n-de-alta-calidad.jpg",
+      ];
+
+      imgs.forEach((link) => {
+        historias.innerHTML += `
+        <div class="rounded-full w-[100px] h-[100px]">
+          <img src="${link}" class="w-[100%] object-cover rounded-full h-[100%] historia" alt="">
+        </div>
+        `;
+      });
+
+      const historia = document.querySelectorAll(".historia");
+
+
+      historia[0].history1 = {
+        url: "https://stories-slider.uiinitiative.com/images/vacation-5.jpg",
+        visto: false,
+        perfil: "juan",
+      };
+      historia[1].history1 = {
+        url: "https://stories-slider.uiinitiative.com/images/vacation-4.jpg",
+        visto: false,
+      };
+      historia[2].history1 = {
+        url: "https://images.ctfassets.net/hrltx12pl8hq/5KiKmVEsCQPMNrbOE6w0Ot/341c573752bf35cb969e21fcd279d3f9/hero-img_copy.jpg?fit=fill&w=600&h=400"
+      }
+
+      historia.forEach((history) => {
+        history.addEventListener("click", (history) => {
+          imgHistoria.src = history.target.history1.url;
+          history.target.history1.visto = true;
+          popup.classList.remove("hidden");
+        });
+      });
+      
+      popup.addEventListener("touchmove",(e)=>{
+        e.preventDefault();
+        console.log("me tienes presionado")
+      })
+
+      equis.addEventListener("click", cerrar);
+      function cerrar() {
+        popup.classList.add("hidden");
+      }
+    </script>
+  </body>
+</html>
